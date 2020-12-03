@@ -4,6 +4,9 @@ Write a simple function that takes as a parameter a date object and returns a bo
 Make sure that your function does not return a false positive by just checking just the day.
 */
 
-function isToday(date) {
-  //Code goes here.
+const isToday = (date) => {
+  let today = new Date();
+  let todayString = today.toString();
+  let dateString = date.toString();
+  return dateString !== todayString ? false : true;
 }
